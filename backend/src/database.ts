@@ -7,6 +7,7 @@ const MONGODB_URI = process.env.MONGO_URI as string;
 console.log(MONGODB_URI);
 
 const connectDB = async (): Promise<void> =>{
+    console.log("halo")
     try{
         await mongoose.connect(MONGODB_URI);
         console.log("Połączono z MongoDB")

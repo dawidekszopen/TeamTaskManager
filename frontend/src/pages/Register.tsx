@@ -2,6 +2,7 @@ import {useState} from "react";
 import * as React from "react";
 import axios from "axios";
 import {useLocation} from "wouter";
+import FrontPage from "./FrontPage.tsx";
 
 const url = "http://localhost:5000/users";
 const Register: React.FC = () => {
@@ -26,8 +27,10 @@ const Register: React.FC = () => {
     }
 
     return(
+        <>
+        <FrontPage/>
+        <h1>Register</h1>
         <form onSubmit={handleSubmit}>
-            <h1>Register</h1>
             <br/>
             <input
                 placeholder="First name"
@@ -59,6 +62,7 @@ const Register: React.FC = () => {
             <br/>
             <input type='submit'/>
         </form>
+        </>
     )
 }
 export default Register
